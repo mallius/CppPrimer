@@ -1,0 +1,2 @@
+IO对象不能复制
+ostream& print(ostream & os);

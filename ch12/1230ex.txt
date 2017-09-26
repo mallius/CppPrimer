@@ -1,0 +1,2 @@
+vector没有一个int的构造函数
+或对单个int形参的构造函数做了explicit处理

@@ -1,0 +1,2 @@
+List<elemType> 改为List
+ListItem 改为ListItem<elemType>

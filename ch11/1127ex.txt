@@ -1,0 +1,5 @@
+[beg, end)中 old_val替换成new_val
+[beg, end)中如果满足谓词pred则替换成new_val
+[beg, end)中拷贝到dest处，且old_value替换成new_value
+[beg, end)中拷贝到dest处，且如果满足谓词函数pred则替换成new_value
+

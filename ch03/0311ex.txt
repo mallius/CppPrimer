@@ -1,0 +1,4 @@
+3.11
+vector<int> ivec;					正确
+vector<string> svec = ivec;			错误
+vector<string> svec2(10, "null");	错误

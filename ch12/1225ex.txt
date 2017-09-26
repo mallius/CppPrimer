@@ -1,0 +1,1 @@
+Foo(std::istream& is = std::cin);

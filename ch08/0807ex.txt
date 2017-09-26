@@ -1,0 +1,17 @@
+ifstream input
+vector<string>::const_iterator it = files.begin();
+while(it != files.end())
+{
+	input.open(it->c_str());
+	if(!input)
+	{
+		input.clear();
+		++it;
+		continue;
+	}
+	while(input >> s)
+		process(2);
+	input.close();
+	input.clear();
+	++it;
+}

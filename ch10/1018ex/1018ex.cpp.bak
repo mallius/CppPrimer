@@ -1,0 +1,67 @@
+#include <map>
+#include <string>
+#include <vector>
+#include <iostream>
+#include <fstream>
+#include <sstream>
+
+using namespace std;
+
+ifstream& open_file(ifstream & in, const string & file)
+{
+	in.close();
+	in.clear();
+	in.open(file.c_str());
+	return in;
+}
+
+int main(int argc, char **argv)
+{
+	map<string, vector<string> > svm;
+	string family;
+	vector<string> name;
+	ifstream infile;
+	string key, value;
+	if(argc != 2)
+	{
+		cout << "error ./a.out argv[1]" << endl;
+		return -1;
+	}
+	if(!open_file(infile, argv[1]))	
+	{
+		cout << "error can not open " << argv[1] << endl;
+		return -2;
+	}
+	while(infile >> key >> value)
+	{
+		cout << key << " " << value << endl;	
+#if 0
+		map<string, vector<string> >::iterator it = svm.find(key);
+		if(it != svm.end())
+		{
+			// 找到家族,再找名字 
+		}
+		else
+		{
+			//未找到家族
+		}
+#endif
+		name.push_back(key);
+		family = value;
+	}
+	svm.insert(make_pair(value, name));
+	
+	// 遍历map
+	cout << "遍历map：" << endl;
+	for(map<string, vector<string> >::iterator it = svm.begin(); it != svm.end(); ++it)
+	{
+		cout << it->first << endl;
+		cout << "size: " << it->second.size() << endl;
+		for(vector<string>::iterator itname = it->second.begin(); itname != it->second.end(); ++itname)
+		{
+			cout << *itname << endl;
+		}
+	}
+	
+	return 0;
+}

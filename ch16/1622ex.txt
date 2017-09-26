@@ -1,0 +1,25 @@
+template<class Type>
+Type calc(const Type* array, int size)
+{
+
+}
+
+template<class Type>
+Type fcn(Type p1, Type p2)
+{
+
+}
+
+int main(void)
+{
+	double dobj;
+	float fobj;
+	char cobj;
+	int ai[5] = {511,16, 8, 63, 34};
+
+	calc(cobj, 'c');  // 第一个参数应为指针类型
+	calc(dobj, fobj); // 第一个参数应为指针类型
+	fcn(ai, cobj);		// 两个参数类型应为同类型
+
+	return 0;
+}

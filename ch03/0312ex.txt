@@ -1,0 +1,6 @@
+(a) vector<int> ivec1;					// 空
+(b) vector<int> ivec2(10)				// 10个元素，每个初始化为0
+(c) vector<int> ivec3(10, 42)			// 10个元素，每个初始化为42
+(d) vector<string> svec1				// 空
+(e) vector<string> svec2(10)			// 10个元素，每个为空
+(f) vector<string> svec3(10, "hello")	// 10个元素，每个为"hello"

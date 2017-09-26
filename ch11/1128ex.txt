@@ -1,0 +1,3 @@
+lst中的100个元素逆序拷贝到vec1
+
+reverse_copy(lst.begin(), lst.end(), front_inserter(vec1));

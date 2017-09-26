@@ -1,0 +1,3 @@
+copy(back_inserter(vec), lst.end(), vec.begin());
+
+fill_n(back_inserter(vec), 10, 0);

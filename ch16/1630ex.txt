@@ -1,0 +1,2 @@
+(b) template <class T, class U, class V> class C2;
+(d) template <typename myT> class C4{}

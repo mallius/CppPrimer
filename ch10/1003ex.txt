@@ -1,0 +1,3 @@
+关联容器不提供front, push_front, pop_front, back, push_back, pop_back
+关联容器不能通过大小来定义，因为这样无法知道键所对应的值
+关联容器使用了键

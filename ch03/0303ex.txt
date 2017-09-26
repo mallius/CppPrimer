@@ -1,0 +1,4 @@
+3.3
+string s;
+string s2(s1);
+string s3("value");

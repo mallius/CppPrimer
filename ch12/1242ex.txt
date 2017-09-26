@@ -1,0 +1,1 @@
+非const的static放在类外定义

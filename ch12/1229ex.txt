@@ -1,0 +1,10 @@
+string null_isbn = "9-999-99999-9";
+string 构造函数创建一个临时变量
+string复制构造函数临时变量复制给null_isbn
+
+Sales_item null(null_isbn);
+Sales_item类构造函数，null_isbn为实参
+
+Sales_item null("9-999-99999-9");
+string构造函数创建临时变量
+Sales_item类构造函数，将临时变量作为实参

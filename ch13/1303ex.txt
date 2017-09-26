@@ -1,0 +1,10 @@
+Point global;
+
+Point foo_bar(Point arg)
+{
+	Point local = arg;  //复制构造
+	Poing *heap = new Point(global); //复制构造
+	*heap = local;
+	Point pa[4] = {local, *heap};  //复制构造
+	return *heap;
+}

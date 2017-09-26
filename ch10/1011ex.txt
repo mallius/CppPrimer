@@ -1,0 +1,4 @@
+map容器的对象的下标必须支持 < 操作符的
+mapped_type
+map<string, int> word;
+下标的类型为string, 返回的类型为int

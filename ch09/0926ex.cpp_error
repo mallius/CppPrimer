@@ -1,0 +1,62 @@
+#include <iostream>
+#include <string>
+#include <vector>
+#include <list>
+#include <deque>
+
+bool isOu(int n)
+{
+	if(n%2 == 0)
+		return true;
+	return false;
+}
+
+using namespace std;
+int main(void)
+{
+	int ia[] = {0,1,1,2,3,5,8,13,21,55,89};
+	vector<int> ivec(ia, ia+sizeof(ia)/sizeof(ia[0]));
+	list<int> ilist(ia, ia+sizeof(ia)/sizeof(ia[0]));
+
+	cout << "---befor erase---" << endl;
+	for(vector<int>::iterator it = ivec.begin(); it != ivec.end(); it++)
+	{
+		cout << *it << ", ";
+	}
+	cout << endl;
+
+	for(list<int>::iterator it = ilist.begin(); it != ilist.end(); it++)
+	{
+		cout << *it << ", ";
+	}
+	cout << endl;
+
+	cout << "---erase---" << endl;	
+	for(vector<int>::iterator it = ivec.begin(); it != ivec.end(); it++)
+	{
+		if(*it%2 == 0)
+			it = ivec.erase(it);
+	}
+
+	for(vector<int>::iterator it = ivec.begin(); it != ivec.end(); it++)
+	{
+		cout << *it << ", ";
+	}
+	cout << endl;
+
+	cout << "---erase---" << endl;
+	for(list<int>::iterator it = ilist.begin(); it != ilist.end(); it++)
+	{
+		if(*it%2 == 1)
+			it = ilist.erase(it);
+			//--it;
+	}
+
+	for(list<int>::iterator it = ilist.begin(); it != ilist.end(); it++)
+	{
+		cout << *it << ", ";
+	}
+	cout << endl;
+
+	return 0;
+}

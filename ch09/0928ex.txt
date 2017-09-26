@@ -1,0 +1,3 @@
+size元素个数
+capacity容量大小 
+list可以任意位置插入,容量自增

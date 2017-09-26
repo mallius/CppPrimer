@@ -1,0 +1,7 @@
+list迭代器不支持关系运算
+
+list<int> lst1;
+for(list<int>::iterator iter = lst1.begin(); iter != lst1.end(); iter++)
+{
+	/* ... */
+}

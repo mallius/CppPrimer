@@ -1,0 +1,7 @@
+Sales_item first_item(cin); <-- Sales_item(std::istream &is);
+Sales_item next; 
+用Sales_item(const std::string &book = ""): isbn(book), units_sold(0), revenue(0,0){}
+
+Sales_item last("9-999-9999-9");
+用Sales_item(const std::string &book = ""): isbn(book), units_sold(0), revenue(0.0){}
+

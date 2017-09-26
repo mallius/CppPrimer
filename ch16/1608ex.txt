@@ -1,0 +1,4 @@
+template <class T1> T1 bar(T1, T1);
+template <class T2> T2 bar(T2, T2);
+
+对

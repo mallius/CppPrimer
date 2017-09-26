@@ -1,0 +1,3 @@
+不合法
+vector<int> ivec;
+ivec.push_back(42);

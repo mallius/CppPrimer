@@ -1,0 +1,2 @@
+显式指出是类型成员
+typename T::size_type *p;

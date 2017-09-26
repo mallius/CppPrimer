@@ -1,0 +1,5 @@
+list适用于中间插入的情况
+vector适用随机访问
+deque适用头尾插入
+map适用于key-value情况
+set适用于键的情况

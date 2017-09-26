@@ -1,0 +1,11 @@
+class Record {
+	typedef std::size_t size;
+	Record():byte_count(0){} // 无参构造函数，byte_count为0
+	Record(size s):byte_count(s){} // 构造函数byte_count为s
+	Record(std::string s):name(s),byte_count(0){} // 构造函数name为s,byte_count为0
+	size byte_count;  // private成员
+	std::string name; // private成员
+public:
+	size get_count()const{ return byte_count; }  // 公有借口返回byte_count
+	std::string get_name()const{return name;}	 // 公有借口返回name
+};

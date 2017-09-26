@@ -1,0 +1,4 @@
+Item_base	book  (audio book cdrom book , children's puppet , rental book)
+			video	game (sega video game , nintendo video game , sony playstation video game)
+					record	
+

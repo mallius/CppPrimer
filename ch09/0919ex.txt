@@ -1,0 +1,2 @@
+while错，for循环
+if(iter == some_val) 错 *iter == some_val

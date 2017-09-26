@@ -1,0 +1,5 @@
+vector<string> svec(10);
+vector<string>::iterator vec_iter = svec.begin();
+if(vec_iter->empty())  // 字符串是否为空
+
+
