@@ -10,6 +10,7 @@
 using namespace std;
 int main(void)
 {
-	string str="strings";
+	string str("strings");
+	cout << str << endl;
 	return 0;
 }
