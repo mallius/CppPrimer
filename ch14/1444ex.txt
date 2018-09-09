@@ -1,0 +1,3 @@
+(a) 1.先 operator double 到double，再double 到int
+    2.先 operator float 到 float ，再float 到int
+(b) 先operator double 到double ，再double 到float

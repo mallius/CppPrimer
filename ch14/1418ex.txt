@@ -1,0 +1,1 @@
+简单，但是含义不清,[]不单可以指vector< pair<string, string>* >

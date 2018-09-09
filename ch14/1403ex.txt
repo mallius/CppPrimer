@@ -1,0 +1,9 @@
+string null_book = "9-999-99999-9";
+c风格的构造函数，然后复制构造函数
+
+Sales_item item(cin);
+从标准输入输入字符
+
+item += null_book;
+null_book转换为Sales_item
+如果构造函数为explicit，不能进行隐式转换，会编译报错。

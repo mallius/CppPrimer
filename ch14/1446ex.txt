@@ -1,0 +1,34 @@
+/*
+(1) ld用 LongDouble::operator double()转换为double,再加15.5
+（2）ld用 LongDouble::operator+(const complex &), 15.5先隐式转换成Complex类
+（3）friend LongDouble operator+(LongDouble&, int), 15.5先转换成int型
+（4）函数LongDouble operator+(const LongDouble &, double)  直接使用。
+ */
+
+/*
+#include <iostream>
+using namespace std;
+
+class Complex {
+    Complex(double d) { };
+};
+
+class LongDouble {
+    friend LongDouble operator+(LongDouble& ld, int i) { cout << "friend" << endl; }
+
+public:
+    LongDouble(int i) { };
+    operator double() { };
+    LongDouble operator+(const Complex& c) {cout << "LongDoulbe operator+(const complex&) " << endl; }
+};
+LongDouble operator+(const LongDouble &ld, double d)
+{
+    cout << "LongDouble operator+(const LongDouble &, double)" << endl;
+}
+
+int main(void)
+{
+    LongDouble ld(16.08);
+    double res = ld + 15.05;
+}
+*/
