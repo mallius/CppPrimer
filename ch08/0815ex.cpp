@@ -1,10 +1,14 @@
 #include <iostream>
+#include <sstream>
 #include <stdexcept>
+
 using namespace std;
+
 istream& print(istream& in)
 {
-	int ival;
-	while(in >> ival, !cin.eof())
+	string sval, outval;
+
+	while(in >> sval, !cin.eof())
 	{
 		if(in.bad())
 			throw runtime_error("IO stream corrupted");
@@ -16,7 +20,12 @@ istream& print(istream& in)
 			in.ignore(2, ' ');
 			continue;
 		}
-		cout << ival << endl;
+
+		istringstream istream(sval);
+		while(istream >> outval) 
+		{
+			cout << outval << endl;
+		}
 	}
 	in.clear();
 	return in;
