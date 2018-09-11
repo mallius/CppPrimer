@@ -1,0 +1,4 @@
+(a) 顺序, vector
+(b) 关联容器
+(c) list
+(d) 遍历容器后插入，list

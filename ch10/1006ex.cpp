@@ -11,6 +11,6 @@ int main(void)
 {
 	map<vector<int>::iterator, int> a;
 	map<list<int>::iterator, int> b;
-	//map<pair<int,string>, int> c;
+	//map<pair<int,string>, int> c;  //pair<int,string>不支持<符号
 	return 0;
 }
