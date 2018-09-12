@@ -15,29 +15,37 @@ int main(void)
 	books.insert(make_pair("Clan", "Book1"));
 	books.insert(make_pair("Clan", "Book1"));
 
-	string search_item("Alan");
-	multimap<string, string>::iterator beg = books.lower_bound(search_item), 
-		end = books.upper_bound(search_item);
 
-	if(beg != end)
+	typedef pair< multimap<string, string>::iterator, multimap<string, string>::iterator > Iter;
+	string search_item = "Alan";
+	cout << "Alan, ";
+	Iter  pos = books.equal_range(search_item);
+	while(pos.first != pos.second)
 	{
-		books.erase(beg, end);
+		cout << pos.first->second << ", ";
+		++pos.first;
 	}
+	cout << endl;
 
+	search_item = "Blan";
+	cout << "Blan, ";
+	pos = books.equal_range(search_item);
+	while(pos.first != pos.second)
+	{
+		cout << pos.first->second << ", ";
+		++pos.first;
+	}
+	cout << endl;
 
 	search_item = "Clan";
-	pair< multimap<string, string>::iterator, multimap<string, string>::iterator >  pos = 
-		books.equal_range(search_item);
-	if(pos.first != pos.second)
+	cout << "Clan, ";
+	pos = books.equal_range(search_item);
+	while(pos.first != pos.second)
 	{
-		books.erase(pos.first, pos.second);
+		cout << pos.first->second << ", ";
+		++pos.first;
 	}
-
-	cout << "删除后遍历multimap: " << endl;
-	for(multimap<string, string>::iterator it = books.begin(); it != books.end(); ++it)
-	{
-		cout << it->first << " ," << it->second << endl;
-	}
+	cout << endl;
 
 	return 0;
 }
