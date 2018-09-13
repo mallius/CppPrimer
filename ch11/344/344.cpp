@@ -1,6 +1,7 @@
 #include <vector>
 #include <iostream>
 #include <algorithm>
+#include "mk_plural2.h"
 
 using namespace std;
 
@@ -27,6 +28,7 @@ int main(void)
 	word.push_back("slow");
 	word.push_back("red");
 	word.push_back("turtle");
+	word.push_back("sevenseven");
 
 	for(vector<string>::iterator it = word.begin(); it != word.end(); ++it)
 	{
@@ -64,6 +66,6 @@ int main(void)
 
 	// 4.count_if 
 	vector<string>::size_type wc = count_if(word.begin(), word.end(), GT6);
-	cout << wc << endl;
+	cout << wc << " "<< make_plural(wc, "word", "s") << " 6 characters or longer" << endl;
 	return 0;
 }
