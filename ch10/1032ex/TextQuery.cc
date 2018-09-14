@@ -92,12 +92,8 @@ void TextQuery::build_map()
             /// word_map[cleanup_str(word)].insert(line_num);
 
 			if(line_num != word_map[cleanup_str(word)].size())
-			// if(line_num != word_map[cleanup_str(word)][word_map[cleanup_str(word)].size()-1])
 				word_map[cleanup_str(word)].push_back(line_num);
-			
 		}
-			
-
     }
 }
 
