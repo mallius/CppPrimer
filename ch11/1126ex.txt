@@ -1,0 +1,4 @@
+(a) it需要是const类型的,编译报错
+(b) ivec是const无法fill改变值,编译报错
+(c) ivec.rend() 无法与ivec.begin()匹配, 编译报错
+(d) 1与2的迭代器不匹配，编译报错
