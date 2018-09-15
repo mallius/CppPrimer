@@ -1,0 +1,2 @@
+Type initVal()  用的Type是string
+Type setVal(Type) 用的Type是double
