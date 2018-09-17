@@ -41,11 +41,11 @@ HasPtr& HasPtr::operator=(const HasPtr &rhs)
 
 int main(void)
 {
-	int obj=1;
-	HasPtr ptr1(&obj, 42);
-	
-
-
+	int *obj= new int(1);
+	HasPtr ptr1(obj, 42);
+	HasPtr ptr2(ptr1);
+	cout << ptr1.get_ptr_val() << endl;
+	cout << ptr1.get_int() << endl;
 
 	return 0;
 }

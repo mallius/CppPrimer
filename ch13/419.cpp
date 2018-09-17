@@ -3,7 +3,7 @@ using namespace std;
 
 class HasPtr{
 public:
-	HasPtr(int *p, int i): ptr(p), val(i){}
+	HasPtr(int *p, int i): ptr(p), val(i){}  //直接复制指针会有潜在的问题
 	int *get_ptr()const{return ptr;}
 	int get_int()const{return val;}
 	void set_ptr(int *p){ptr=p;}
@@ -22,16 +22,17 @@ int main(void)
 	HasPtr ptr2(ptr1);
 	
 	ptr1.set_int(0);
-	ptr2.get_int();
-	ptr1.get_int();
+	cout << ptr2.get_int() << endl;
+	cout << ptr1.get_int() << endl;
 
-	ptr1.set_ptr_val(42);
-	ptr2.get_ptr_val();
+	ptr1.set_ptr_val(42);  //设置了ptr1, ptr2也改变了
+	cout << ptr2.get_ptr_val() << endl;
 
 	int *ip = new int(42);
 	HasPtr ptr(ip, 10);
-	delete ip;
-	ptr.set_ptr_val(0); //disaster: The object to which HasPtr points was freed!
+	delete ip;  // ip指向的内容释放, 还给ip指向的内容赋值
+	ptr.set_ptr_val(101); //disaster: The object to which HasPtr points was freed!
+	cout << ptr.get_ptr_val() << endl;  //竟然还能赋值成功
 	
 	return 0;
 }
