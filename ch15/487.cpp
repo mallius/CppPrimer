@@ -3,7 +3,7 @@ using namespace std;
 
 class Base{
 public:
-	static void statmem();   //struct默认public
+	static void statmem() {  };   //struct默认public
 };
 
 class Derived : public Base{
