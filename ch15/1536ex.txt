@@ -1,0 +1,2 @@
+const_iter定义为
+std::multiset<Sales_item, bool (*Comp)(const Sales_item&, const Sales_item&)>::const_iterator  
