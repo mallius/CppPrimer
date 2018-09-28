@@ -1,0 +1,7 @@
+(a)AndQuery, NotQuery, OrQuery, WordQuery, WordQuery, WordQuery =6个Query_base对象
+还有6个关联句柄对象，共12个
+
+(b) Or, And, Not, W, W, W = 6个Query_base
+6个句柄，共12个
+
+(c)14个
