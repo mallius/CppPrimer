@@ -28,5 +28,5 @@ private:
 	void destroy();
 	void copy_elems(const Queue&);
 };
-
+#include "Queue.cpp"
 #endif
