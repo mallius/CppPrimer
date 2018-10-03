@@ -1,14 +1,12 @@
 #include "Queue.h"
 
-template <class Type> 
-void Queue<Type>::destroy()
+template <class Type> void Queue<Type>::destroy()
 {
 	while(!empty())
 		pop();
 }
 
-template <class Type> 
-void Queue<Type>::pop()
+template <class Type> void Queue<Type>::pop()
 {
 	QueueItem<Type>* p = head;
 	head = head->next;
@@ -27,8 +25,7 @@ template <class Type> void Queue<Type>::push(const Type &val)
 	}
 }
 
-template <class Type>
-void Queue<Type>::copy_elems(const Queue &orig)
+template <class Type> void Queue<Type>::copy_elems(const Queue &orig)
 {
 	// copy elements from orig into this Queue 
 	// loop stops when pt == 0, which happens when we reac orig.tail 
@@ -41,6 +38,7 @@ void Queue<Type>::copy_elems(const Queue &orig)
 template <class Type>
 Queue<Type>& Queue<Type>::operator=(const Queue<Type>& Q)
 {
-	
-
+	destroy();
+	copy_elems(Q);
+	return *this;	
 }

@@ -1,8 +1,11 @@
 #ifndef __QUEUE_H__
 #define __QUEUE_H__
 
+template <class Type> class Queue;
+
 template <class Type> class QueueItem
 {
+	friend class Queue<Type>;
 	QueueItem(const Type &t): item(t), next(0) { }	  
 	Type item;
 	QueueItem *next;
@@ -20,7 +23,7 @@ public:
 	const Type& front()const { return head->item; }
 	void push(const Type &);
 	void pop(); 
-	bool empty() const { return head = 0; }
+	bool empty() const { return head == 0; }
 
 private:
 	QueueItem<Type> *head;
@@ -28,5 +31,7 @@ private:
 	void destroy();
 	void copy_elems(const Queue&);
 };
-#include "Queue.cpp"
+
+#include "Queue.cpp"  // 包含编译
+
 #endif

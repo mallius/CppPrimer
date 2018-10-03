@@ -1,3 +1,4 @@
+#include <string>
 template<int hi, int wid>
 class Screen
 {
@@ -9,3 +10,8 @@ private:
 	std::string::size_type cursor;
 	std::string::size_type height, width;
 };
+
+int main(void)
+{
+	Screen<24, 80> hp2621;
+}
