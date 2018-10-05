@@ -1,0 +1,2 @@
+return real_queue.front().c_str();
+即可返回char*
