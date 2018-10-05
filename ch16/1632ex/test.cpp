@@ -15,8 +15,8 @@ int main(void)
 	qi.push(i);
 	
 	Queue<int> q = qi;
-	int v = q.pop();
-	cout << v;	
+	// int v = q.pop();
+	// cout << v;	
 
 	return 0;
 }
