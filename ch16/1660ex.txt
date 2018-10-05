@@ -1,0 +1,2 @@
+为类特例化，用string代替了char*的操作
+为push和pop特例化，front返回值为const char*可以转换为char*，可以破坏Queue元素

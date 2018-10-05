@@ -1,0 +1,2 @@
+567, 569中的const char* 改为char* 即为Queue<char*>特例化，或为
+Queue<char*>::push和Queue<char*>::pop特例化
