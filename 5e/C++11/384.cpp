@@ -6,13 +6,12 @@ using namespace std;
 
 int main(void)
 {
-	map<string, size_t> word_count;
-	string word("word");
+	auto f = [] { return 42; };
+	cout << f() << endl;
 
-	word_count.insert({word, 1});
-	word_count.insert(make_pair(word, 1));
-	word_count.insert(pair<string, size_t>(word, 1));
-	word_count.insert(map<string, size_t>::value_type(word, 1));
+	[](const string& a, const string& b)
+	{ return a.size() < b.size(); };
+
 
 	return 0;
 }
