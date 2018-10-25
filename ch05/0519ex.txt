@@ -1,0 +1,6 @@
+(a) *iter++;		//正确
+(b) (*iter)++;		//错误
+(c) *iter.empty();	//错误应该是(*iter).empty();
+(d) iter->empty();	//正确
+(e) ++*iter;		//错误
+(f) iter++->empty();//正确即(iter++)->empty()
