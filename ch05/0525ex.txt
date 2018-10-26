@@ -1,0 +1,5 @@
+(a) ! ptr == ptr->next
+即 ((!ptr) == (ptr->next))
+
+(b) ch = buf[ bp++ ] != '\n'
+即 (ch = ((buf[ (bp++) ]) != '\n'))
