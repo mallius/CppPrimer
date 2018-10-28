@@ -20,7 +20,7 @@ int main(void)
 	delete ps;
 
 	cls *pc = new cls();
-	delete pc;
+	delete pc; 
 
 	return 0;
 }

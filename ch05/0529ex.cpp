@@ -21,7 +21,7 @@ int main(void)
 	//if(ptr != 0 && *ptr++)  //错误
 		//cout << "ptr != 0 && *ptr++" << endl;
 	//ival++ && ival 有歧义 
-	//vec[ival++] <= vec[ival] //有歧义
+	//vec[ival++] <= vec[ival] //有歧义 
 		
 	return 0;
 }
