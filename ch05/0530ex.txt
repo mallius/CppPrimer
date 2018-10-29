@@ -1,0 +1,10 @@
+v
+v
+x
+v
+v
+x
+v
+x
+v
+x 两次delete同一内存
