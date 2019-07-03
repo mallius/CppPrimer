@@ -1,0 +1,2 @@
+*(dest++) = *(source++);
+即*dest = source; dest++; source++;
