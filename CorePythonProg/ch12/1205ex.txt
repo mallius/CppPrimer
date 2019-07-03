@@ -1,0 +1,4 @@
+(a)
+sys = __import__('sys')
+(b)
+sys = __import__('sys', globals(), locals(), [])

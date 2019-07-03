@@ -1,0 +1,6 @@
+(a)
+import mymodule
+from mymodule import foo
+(b)
+导入了整个mymoudle
+导入了mymoudle中的foo函数

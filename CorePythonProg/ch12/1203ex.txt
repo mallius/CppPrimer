@@ -1,0 +1,2 @@
+from module import *
+覆盖当前名称空间中现有的名字
