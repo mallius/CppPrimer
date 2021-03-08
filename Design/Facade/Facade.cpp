@@ -46,25 +46,37 @@ class SecuritFacade {
 public:
 	SecuritFacade() {
 		Carmera* m_pCarmera = new Carmera;
-		Light* m_pPLight = new Light;
+		Light* m_pLight = new Light;
 		Sensor* m_pSensor = new Sensor;
 		Alarm* m_pAlaram = new Alarm;
 	}
 	void active() {
 		m_pCarmera->turnOn();
-		m_pPLight->turnOn();
+		m_pLight->turnOn();
 		m_pSensor->active();
 		m_pAlaram->active();
 	}
 	void deactive() {
 		m_pCarmera->turnOff();
-		m_pPLight->turnOff();
+		m_pLight->turnOff();
 		m_pSensor->deactive();
 		m_pAlaram->deactive();
 	}
+	~SecuritFacade()
+	{
+		if(m_pCarmera != nullptr)
+			m_pCarmera->~Carmera();
+		if(m_pLight != nullptr)
+			m_pLight->~Light();
+		if(m_pSensor != nullptr)
+			m_pSensor->~Sensor();
+		if(m_pAlaram != nullptr)
+			m_pAlaram->~Alarm();
+
+	}
 private:
 	Carmera* m_pCarmera;
-	Light* m_pPLight ;
+	Light* m_pLight ;
 	Sensor* m_pSensor ;
 	Alarm* m_pAlaram ;
 };
